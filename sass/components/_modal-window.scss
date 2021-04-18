@@ -9,6 +9,7 @@
     min-width: calc(100% - 30px);
     max-width: 450px;
     overflow: scroll;
+    height: calc(100% - 94px);
   }
   @media screen and (min-width: 481px) {
     min-width: 450px;

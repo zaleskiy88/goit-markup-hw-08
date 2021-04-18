@@ -86,7 +86,7 @@
         </button>
         <ul class="mobile-modal-menu__list list">
           <li class="mobile-modal-menu__item">
-            <a href="./index.html" class="mobile-modal-menu__link link"
+            <a href="./index.html" class="mobile-modal-menu__link link current"
               >Студия</a
             >
           </li>
@@ -245,36 +245,66 @@
           <ul class="our-work-cards-list list">
             <li class="our-work-cards-list__item">
               <div class="our-work-cards-list__content-wrapper">
-                <img
-                  class="our-work-cards-list__img"
-                  src="./img/what-we-r-doing/imgtyping.jpg"
-                  width="370"
-                  alt="руки человека печатающего код программы на планшете c клавиатурой"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/what-we-r-doing/img-typing@1x.jpg 1x,
+                      ./img/what-we-r-doing/img-typing@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="team-members-list__img"
+                    src="./img/what-we-r-doing/imgtyping.jpg"
+                    alt="руки человека печатающего код программы на планшете c клавиатурой"
+                  />
+                </picture>
+
                 <p class="our-work-cards-list__text">Десктопные приложения</p>
               </div>
             </li>
 
             <li class="our-work-cards-list__item">
               <div class="our-work-cards-list__content-wrapper">
-                <img
-                  class="our-work-cards-list__img"
-                  src="./img/what-we-r-doing/imgpc.jpg"
-                  width="370"
-                  alt="руки человека со смартфоном смотрящего на ноутбук"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/what-we-r-doing/img-pc@1x.jpg 1x,
+                      ./img/what-we-r-doing/img-pc@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="team-members-list__img"
+                    src="./img/what-we-r-doing/imgpc.jpg"
+                    alt="руки человека со смартфоном смотрящего на ноутбук"
+                  />
+                </picture>
+
                 <p class="our-work-cards-list__text">Мобильные приложения</p>
               </div>
             </li>
 
             <li class="our-work-cards-list__item">
               <div class="our-work-cards-list__content-wrapper">
-                <img
-                  class="our-work-cards-list__img"
-                  src="./img/what-we-r-doing/imgtablet.jpg"
-                  width="370"
-                  alt="рука держащая планшет с избражением цветной палитры на экране "
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./img/what-we-r-doing/img-tablet@1x.jpg 1x,
+                      ./img/what-we-r-doing/img-tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="team-members-list__img"
+                    src="./img/what-we-r-doing/imgtablet.jpg"
+                    alt="рука держащая планшет с избражением цветной палитры на экране"
+                  />
+                </picture>
+
                 <p class="our-work-cards-list__text">Дизайнерские решения</p>
               </div>
             </li>
@@ -306,6 +336,7 @@
 
                 <img
                   class="team-members-list__img"
+                  src="./img/our-team/member-igor-450.jpg"
                   srcset="
                     ./img/our-team/member-igor-450.jpg    1x,
                     ./img/our-team/member-igor-450@2x.jpg 2x
@@ -394,6 +425,7 @@
 
                 <img
                   class="team-members-list__img"
+                  src="./img/our-team/member-olga-450.jpg"
                   srcset="
                     ./img/our-team/member-olga-450.jpg    1x,
                     ./img/our-team/member-olga-450@2x.jpg 2x
@@ -482,6 +514,7 @@
 
                 <img
                   class="team-members-list__img"
+                  src="./img/our-team/member-nikolai-450.jpg"
                   srcset="
                     ./img/our-team/member-nikolai-450.jpg    1x,
                     ./img/our-team/member-nikolai-450@2x.jpg 2x
@@ -567,6 +600,7 @@
 
                 <img
                   class="team-members-list__img"
+                  src="./img/our-team/member-mikhail-450.jpg"
                   srcset="
                     ./img/our-team/member-mikhail-450.jpg    1x,
                     ./img/our-team/member-mikhail-450@2x.jpg 2x
@@ -870,8 +904,7 @@
                 type="tel"
                 name="user-email"
                 class="modal-form__input"
-                pattern="[0-9]{3}[0-9]{9}"
-                ="351 987 654 321"
+                pattern="[0-9]{3}[0-9]{9}=351 987 654 321"
               />
               <svg class="modal-form__icon icon-phone" width="18" height="18">
                 <use href="./img/sprite.svg#icon-phone"></use>

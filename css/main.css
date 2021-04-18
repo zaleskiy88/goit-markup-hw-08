@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --main-font: "roboto", sans-serif;
   --secondary-font: "raleway", sans-serif;
@@ -671,6 +672,7 @@ body {
     min-width: calc(100% - 30px);
     max-width: 450px;
     overflow: scroll;
+    height: calc(100% - 94px);
   }
 }
 
@@ -790,7 +792,7 @@ body {
   padding: 0;
   background-color: transparent;
   border: none;
-  fill: var(--title-color);
+  color: var(--title-color);
   cursor: pointer;
   transition: fill 250ms var(--transition-timing);
 }
@@ -798,7 +800,7 @@ body {
 .mobile-burger-btn:hover, .mobile-burger-btn:focus,
 .mobile-menu-close-btn:hover,
 .mobile-menu-close-btn:focus {
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .mobile-burger-btn__icon,
@@ -825,6 +827,14 @@ body {
   transition: transform 1000ms var(--transition-timing);
 }
 
+@media screen and (min-width: 270px) and (max-width: 380px) {
+  .mobile-modal-menu {
+    padding-top: 38px;
+    padding-left: 30px;
+    padding-bottom: 38px;
+  }
+}
+
 .mobile-modal-menu__link:hover, .mobile-modal-menu__link:focus {
   color: var(--accent-color);
 }
@@ -843,6 +853,14 @@ body {
   color: var(--title-color);
 }
 
+@media screen and (min-width: 270px) and (max-width: 374px) {
+  .mobile-modal-menu__list {
+    margin-bottom: 140px;
+    font-size: 35px;
+    line-height: 1.7;
+  }
+}
+
 .mobile-modal-menu__contacts-list {
   margin-bottom: 64px;
 }
@@ -855,6 +873,12 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 270px) and (max-width: 380px) {
+  .mobile-modal-menu__tel-link {
+    font-size: 30px;
+  }
 }
 
 .mobile-modal-menu__email-link {
@@ -874,9 +898,9 @@ body {
   letter-spacing: 0.02em;
 }
 
-@media screen and (min-width: 270px) and (max-width: 399px) {
+@media screen and (min-width: 270px) and (max-width: 380px) {
   .mobile-modal-menu__social-list {
-    display: inline-block;
+    font-size: 14px;
   }
 }
 
@@ -885,11 +909,9 @@ body {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-@media screen and (min-width: 270px) and (max-width: 399px) {
-  .mobile-modal-menu__social-item {
-    margin-bottom: 10px;
-    margin-right: 10px;
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
+@media screen and (min-width: 270px) and (max-width: 380px) {
+  .mobile-modal-menu__social-item:not(:last-child) {
+    margin-right: 6px;
   }
 }
 
@@ -902,6 +924,10 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
+}
+
+.current {
+  color: var(--accent-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -972,9 +998,6 @@ body {
   .our-contacts-list__link:hover, .our-contacts-list__link:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
-  }
-  .current {
-    color: var(--accent-color);
   }
   .current::after {
     position: absolute;
@@ -1167,29 +1190,20 @@ body {
 
 .hero-section {
   width: 100vw;
-  height: 400px;
   padding-top: 118px;
   text-align: center;
   background-color: #2f303a;
-}
-
-@media screen and (min-width: 480px) {
-  .hero-section {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero-section {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .hero-section {
+  /* @media screen and (min-width: 480px) {
+     width: 480px;
+   }
+   @media screen and (min-width: 768px) {   Я осатвил ети правила здесь для личного пользования
+     width: 768px;
+   }
+  @media screen and (min-width: 1200px) {
     width: 100%;
     padding-top: 200px;
   }
+*/
 }
 
 @media screen and (max-width: 767px) {
@@ -1265,6 +1279,12 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 270px) and (max-width: 380px) {
+  .modal-form-call-on {
+    font-size: 18px;
+  }
 }
 
 .modal-form {
@@ -1382,7 +1402,7 @@ body {
   .modal-form__terms::before {
     margin-right: 5px;
     width: 18px;
-    width: 20px;
+    width: 31px;
   }
 }
 
