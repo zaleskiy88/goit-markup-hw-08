@@ -1190,6 +1190,7 @@ body {
 
 .hero-section {
   width: 100vw;
+  height: 400px;
   padding-top: 118px;
   text-align: center;
   background-color: #2f303a;
