@@ -823,7 +823,6 @@ body {
   background-color: var(--background-color);
   transform: translateY(-101%) translateX(-50%);
   transition: transform 1000ms var(--transition-timing);
-  outline: 1px solid blue;
 }
 
 .mobile-modal-menu__link:hover, .mobile-modal-menu__link:focus {
