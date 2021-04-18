@@ -67,8 +67,9 @@
     top: 50%;
     left: 14px;
     transform: translateY(-50%);
-
     padding: 3px;
+
+    color: var(--title-color);
 
     transition: fill 250ms var(--transition-timing);
     /*transition-property: fill;
