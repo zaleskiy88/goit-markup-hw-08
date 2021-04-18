@@ -1,0 +1,32 @@
+.logo {
+  display: inline;
+
+  // padding: 24px 0;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+
+  @media screen and (max-width: 480px) {
+    padding: 0;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 26px 0;
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+    padding: 26px 0;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+.logo_theme_white {
+  color: var(--title-color);
+}
+.logo_theme_dark {
+  color: #ffffff;
+}

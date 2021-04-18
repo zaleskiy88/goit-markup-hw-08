@@ -1,0 +1,19 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  scale: 1;
+  transform: skew(0deg);
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: scale 1000ms var(--transition-timing),
+    opacity 1000ms var(--transition-timing),
+    visibility 1000ms var(--transition-timing),
+    pointer-events 1000ms var(--transition-timing),
+    transform 1000ms var(--transition-timing);
+}

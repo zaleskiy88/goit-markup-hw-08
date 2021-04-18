@@ -1,0 +1,181 @@
+.cards-list {
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    margin-left: -30px;
+  }
+  &__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 354px; //calc(100% / 2 - 30px);
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      width: 370px; //calc(100% / 3 - 30px);
+      margin-left: 30px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      &:nth-child(-n + 6) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    max-width: 100%;
+
+    transition: box-shadow 250ms var(--transition-timing);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  &__overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    padding: 77px 24px;
+
+    @media screen and (max-width: 425px) {
+      padding: 55px 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 49px 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
+    transform: translateY(101%);
+
+    background-color: rgba(33, 150, 243, 0.9);
+    @include textDescription(
+      18px,
+      28px,
+      var(--background-color),
+      $letterSpc: 0.03em
+    );
+
+    transition: transform 250ms var(--transition-timing);
+    .cards-list__link:hover &,
+    .cards-list__link:focus & {
+      transform: translateY(0%);
+    }
+  }
+  &__project-title {
+    @include title(16px, 36px, 700, $letterSpc: 0.06em);
+  }
+  &__project-desc {
+    @include textDescription(16px, 30px, var(--text-color), $letterSpc: 0.03em);
+  }
+}
+
+.card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-item-desc-wrapper {
+  padding: 20px 24px;
+
+  background-color: var(--background-color);
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+// .cards-list {
+//   width: 1200px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-left: var(--cards-margin-negative);
+//   margin-top: var(--cards-margin-negative);
+// }
+// .cards-list__item {
+//   margin-top: var(--cards-margin);
+//   margin-left: var(--cards-margin);
+//   flex-basis: calc(100% / 3 - 30px);
+// }
+// .cards-list__link {
+//   display: inline-block;
+
+//   transition: box-shadow 250ms var(--transition-timing);
+//   /*transition-property: box-shadow;
+//   transition-duration: 250ms;
+//   transition-timing-function: var(--transition-timing);
+//   */
+
+//   &:hover,
+//   &:focus {
+//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//       1px 4px 6px rgba(0, 0, 0, 0.16);
+//   }
+// }
+// .card-img-wrapper {
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// .cards-list__overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+
+//   width: 101%;
+//   height: 101%;
+//   padding: 64px 24px;
+
+//   font-size: 18px;
+//   line-height: 1.55;
+//   letter-spacing: 0.03em;
+//   background-color: var(--accent-color-opacity);
+//   color: #ffffff;
+
+//   transform: translateY(101%);
+//   transition: transform 250ms var(--transition-timing);
+//   /*transition-property: transform;
+//   transition-duration: 250ms;
+//   transition-timing-function: var(--transition-timing);
+//   */
+
+//   .cards-list__link:hover &,
+//   .cards-list__link:focus & {
+//     transform: translateY(0%);
+//   }
+// }
+
+// .card-item-desc-wrapper {
+//   padding: 20px 24px;
+//   border-bottom: 1px solid #eeeeee;
+//   border-left: 1px solid #eeeeee;
+//   border-right: 1px solid #eeeeee;
+// }
+// .cards-list__project-title {
+//   @include title(18px, 36px, 700);
+
+//   margin-bottom: 4px;
+
+//   letter-spacing: 0.06em;
+// }
+// .cards-list__project-desc {
+//   @include textDescription(16px, 30px, var(--text-color));
+// }
