@@ -739,9 +739,14 @@ body {
   font-weight: 700;
   letter-spacing: 0.03em;
   letter-spacing: 0.03em;
-  text-align: center;
   margin-bottom: 10px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .features-list__title {
+    text-align: center;
+  }
 }
 
 .features-list__desc {
@@ -1191,7 +1196,7 @@ body {
 @media screen and (max-width: 767px) {
   .hero-section {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/hero-bg-img-480.jpg");
-    background-size: 100% 400px;
+    background-size: cover;
   }
 }
 

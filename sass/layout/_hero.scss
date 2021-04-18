@@ -24,7 +24,7 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../img/hero-bg-img-480.jpg");
-    background-size: 100% 400px;
+    background-size: cover; //100% 400px;
 
     @media (min-device-pixel-ratio: 2),
       (-webkit-min-device-pixel-ratio: 2),
