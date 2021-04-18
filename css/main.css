@@ -331,7 +331,7 @@ body {
 }
 
 .section {
-  width: 100vw;
+  /*width: 100vw; //1600px*/
   margin-right: auto;
   margin-left: auto;
   padding: var(--p-section) 0;
